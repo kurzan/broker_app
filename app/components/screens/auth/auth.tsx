@@ -33,18 +33,18 @@ const Auth = () => {
       <View style={tw('mx-5 justify-center items-center h-full')} >
         <View style={tw('w-9/12')}>
           <Text style={tw('text-center text-gray-800 text-2xl font-bold mb-2')}>
-            {isReg ? 'Войти' : 'Открыть счет'}
+            {!isReg ? 'Войти' : 'Открыть счет'}
           </Text>
 
           {isLoading ? <Loader /> : <>
 
             <Field val={data.email} placeholder='Введите e-mail' onChange={val => setData({ ...data, email: val })} />
             <Field val={data.password} placeholder='Введите пароль' isSecure={true} onChange={val => setData({ ...data, password: val })} />
-            <Button onPress={authHandler} title={isReg ? 'Войти' : 'Открыть счет'}/>
+            <Button onPress={authHandler} title={!isReg ? 'Войти' : 'Открыть счет'}/>
 
             <Pressable onPress={() => setIsReg(!isReg)}>
               <Text style={tw('text-gray-800 opacity-30 text-right text-sm')} >
-                {isReg ? 'Зарегистрироваться' : 'Войти'}
+                {!isReg ? 'Зарегистрироваться' : 'Войти'}
               </Text>
             </Pressable>  
 

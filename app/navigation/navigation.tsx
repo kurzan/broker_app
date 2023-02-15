@@ -25,7 +25,7 @@ const Navigation = () => {
     <>
       <NavigationContainer ref={ref}>
         <Stack.Navigator screenOptions={{headerShown: false}}>
-          {!user ? (
+          {user ? (
             <>
               <Stack.Screen name='Home' component={Home} />
               <Stack.Screen name='Payments' component={Payments} />
@@ -34,7 +34,7 @@ const Navigation = () => {
           ) : (<Stack.Screen name='Auth' component={Auth} />)}
         </Stack.Navigator> 
       </NavigationContainer>
-      <Footer navigate={ref.navigate} currentRoute={name} />
+      {user && <Footer navigate={ref.navigate} currentRoute={name} />}
     </>
   )
 };
