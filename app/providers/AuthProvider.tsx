@@ -31,7 +31,7 @@ export const AuthProvider = ({children}: {children: any}) => {
         displaName: 'No name'
       })
     } catch (error: any) {
-      Alert.alert('Ошибка регистрации', error)
+      alert('Ошибка регистрации')
     } finally {
       setIsLoading(false)
     }
@@ -43,7 +43,7 @@ export const AuthProvider = ({children}: {children: any}) => {
     try {
       await login(email, password);
     } catch (error: any) {
-      Alert.alert('Ошибка входа', error)
+      alert('Ошибка входа')
     } finally {
       setIsLoading(false)
     }
@@ -55,7 +55,7 @@ export const AuthProvider = ({children}: {children: any}) => {
     try {
       await logout();
     } catch (error: any) {
-      Alert.alert('Ошибка при выходе', error)
+      alert('Ошибка при выходе')
     } finally {
       setIsLoading(false)
     }
