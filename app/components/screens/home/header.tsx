@@ -6,17 +6,20 @@ import { useNavigation } from '@react-navigation/native';
 import { Entypo} from '@expo/vector-icons';
 import { useProfile } from '../profile/useProfile';
 import Loader from '../../ui/loader';
+import { useAuth } from '../../../hooks/useAuth';
 
 
 const Header = () => {
   const { navigate } = useNavigation();
 
+  const { user } = useAuth();
+
   return (
     <Padding style={tw('flex-row items-center')}>
-      <Avatar name='Misha' />
+      <Avatar name={user?.email} />
       <TouchableOpacity onPress={() => navigate('Profile')} style={tw('flex-row items-end')}>
-        <Text style={tw('text-2xl text-gray-800 font-bold')}>Misha</Text>
-        <Entypo name='chevron-small-right' size={28} style={tw('text-gray-800')} />
+        <Text style={tw('text-2xl text-gray-50 font-bold')}>{user?.email}</Text>
+        <Entypo name='chevron-small-right' size={28} style={tw('text-gray-50')} />
       </TouchableOpacity>
     </Padding>
   )

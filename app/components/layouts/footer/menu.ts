@@ -2,23 +2,28 @@ import { IFooterItem } from './types';
 
 export const menu: IFooterItem[] = [
   {
-    iconName: 'creditcard',
-    title: 'Home'
+    iconName: 'home',
+    title: 'Home',
+    ru_title: 'Главная'
   },
   {
-    iconName: 'pay-circle1',
-    title: 'Payments'
+    iconName: 'search1',
+    title: 'Market',
+    ru_title: 'Что купить'
   },
   {
-    iconName: 'switcher',
-    title: 'Services'
+    iconName: 'barschart',
+    title: 'Quotes',
+    ru_title: 'Котировки'
   },
   {
     iconName: 'message1',
-    title: 'Support'
+    title: 'Support',
+    ru_title: 'Чат'
   },
   {
     iconName: 'ellipsis1',
-    title: 'More'
+    title: 'More',
+    ru_title: 'Еще'
   }
 ];

@@ -10,10 +10,10 @@ interface IButton {
 }
 
 
-const Button: FC<IButton> = ({onPress, title, colors = ['bg-yellow-300', '#FBBF24'] }) => {
+const Button: FC<IButton> = ({onPress, title, colors = ['bg-blue-500', '#60a5fa'] }) => {
   return(
-    <TouchableHighlight onPress={onPress} underlayColor={colors[1]} style={tw(`${colors[0]} text-gray-800 rounded-xl w-full my-4 py-3`)} >
-      <Text style={tw('text-center')}>{title}</Text>
+    <TouchableHighlight onPress={onPress} underlayColor={colors[1]} style={tw(`${colors[0]} text-gray-50 rounded-xl w-full my-4 py-3`)} >
+      <Text style={tw('text-center text-gray-50')}>{title}</Text>
     </TouchableHighlight>
   )
 }

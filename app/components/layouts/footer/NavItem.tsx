@@ -17,8 +17,8 @@ const NavItem: FC<INavItem> = ({item, navigate, currentRoute}) => {
 
   return (
     <Pressable style={{...tw('items-center'), width: '20%'}} onPress={() => navigate(item.title)}>
-      <AntDesign name={item.iconName} style={tw(`text-xl ${isActive ? 'text-blue-500' : 'text-gray-500'}`)} />
-      <Text style={{...tw(`text-xs ${isActive ? 'text-blue-500' : 'text-gray-500'}`), marginTop: 1}}>{item.title}</Text>
+      <AntDesign name={item.iconName} style={tw(`text-xl ${isActive ? 'text-blue-500' : 'text-gray-200'}`)} />
+      <Text style={{...tw(`text-xs ${isActive ? 'text-blue-500' : 'text-gray-200'}`), marginTop: 1}}>{item.ru_title}</Text>
     </Pressable>
   )
 };

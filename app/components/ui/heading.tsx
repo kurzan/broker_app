@@ -7,7 +7,7 @@ const Heading: FC<{text: string, isCenter?: boolean}> = ({text, isCenter = false
 
   return (
     <Padding>
-      <Text style={tw(`text-2xl font-bold text-gray-800 ${isCenter ? 'text-center' : '' }`)}>{text}</Text>
+      <Text style={tw(`text-2xl font-bold text-gray-50 ${isCenter ? 'text-center' : '' }`)}>{text}</Text>
     </Padding>   
   )
 };

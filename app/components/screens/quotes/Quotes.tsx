@@ -1,11 +1,11 @@
 import { View, Text } from "react-native";
 
-const Payments = () => {
+const Quotes = () => {
   return (
     <View>
-      <Text>Payments</Text>
+      <Text>Quotes</Text>
     </View>
   )
 };
 
-export default Payments;
+export default Quotes;

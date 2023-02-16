@@ -15,9 +15,9 @@ const Footer: FC<IFooter> = ({navigate, currentRoute}) => {
   return (
     <Padding style={{
       ...tw(
-        'flex-row justify-between items-center w-full bg-gray-50 px-0 pb-10 pt-2'
+        'flex-row justify-between items-center w-full bg-gray-800 px-0 pb-10 pt-2'
       ),
-      borderTopColor: '#E1E1E1',
+      borderTopColor: '#2C2C2C',
       borderTopWidth: 1,
     }}>
 

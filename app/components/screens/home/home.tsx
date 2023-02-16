@@ -4,19 +4,20 @@ import Button from "../../ui/button";
 import Layout from "../../layouts/Layout";
 import { useAuth } from "../../../hooks/useAuth";
 import { useEffect } from "react";
+import Padding from "../../ui/Padding";
+import Stories from "./stories/Stories";
 
 
 const Home = () => {
   const {user} = useAuth();
 
-  useEffect(() => {
-    console.log(user)
-  }, [])
-
   return (
     <Layout>
       <Header />
-      <Text>{user?.email}</Text>
+      <Padding>
+        <Stories />
+        <Button onPress={() => {}} title='Открыть новый договор' />
+      </Padding>
     </Layout>
   )
 };

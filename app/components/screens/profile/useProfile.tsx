@@ -12,7 +12,7 @@ interface IProfile {
 export const useProfile = () => {
   const {user} = useAuth();
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [profile, setProfile] = useState<IProfile>({} as IProfile);
   const [name, setName] = useState('');
 

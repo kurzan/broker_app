@@ -12,7 +12,7 @@ export const styleCenter = tw('h-full w-full bg-white pt-16');
 const Layout: FC<ILayout> = ({children, isScrollView = true}) => {
   return (
 
-    <View style={styleCenter}>
+    <View style={{...styleCenter, ...{backgroundColor: '#04010B'}}}>
       { isScrollView ? <ScrollView>{children}</ScrollView> : children }
     </View>
   )

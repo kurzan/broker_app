@@ -4,7 +4,8 @@ import { useAuth } from "../hooks/useAuth";
 import { useState, useEffect } from 'react';
 import Auth from "../components/screens/auth/auth";
 import Home from "../components/screens/home/home";
-import Payments from "../components/screens/payments/payments";
+import Market from '../components/screens/payments/Market';
+import Quotes from '../components/screens/quotes/Quotes';
 import Profile from "../components/screens/profile/profile";
 import Footer from "../components/layouts/footer/Footer";
 
@@ -38,7 +39,8 @@ const Navigation = () => {
           {user ? (
             <>
               <Stack.Screen name='Home' component={Home} />
-              <Stack.Screen name='Payments' component={Payments} />
+              <Stack.Screen name='Market' component={Market} />
+              <Stack.Screen name='Quotes' component={Quotes} />
               <Stack.Screen name='Profile' component={Profile} />
             </> 
           ) : (<Stack.Screen name='Auth' component={Auth} />)}
