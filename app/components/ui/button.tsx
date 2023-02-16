@@ -3,7 +3,7 @@ import { TouchableHighlight, Text } from "react-native";
 import tw from 'tailwind-rn';
 
 interface IButton {
-  onPress: () => void,
+  onPress: any,
   title: string,
   colors?: [string, string],
 

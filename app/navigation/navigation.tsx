@@ -21,6 +21,16 @@ const Navigation = () => {
     return () => clearTimeout(timeout);
   }, [])
 
+  useEffect(() => {
+    const listener = ref.addListener('state', () => {
+      setName(ref.getCurrentRoute()?.name)
+    })
+
+    return () => {
+      ref.removeListener('state', listener);
+    }
+  }, [user])
+
   return (
     <>
       <NavigationContainer ref={ref}>

@@ -1,15 +1,23 @@
 import { View, Text } from "react-native";
 import Header from "./header";
 import Button from "../../ui/button";
-import { logout } from "../../../utils/firebase";
+import Layout from "../../layouts/Layout";
+import { useAuth } from "../../../hooks/useAuth";
+import { useEffect } from "react";
+
 
 const Home = () => {
+  const {user} = useAuth();
+
+  useEffect(() => {
+    console.log(user)
+  }, [])
+
   return (
-    <View>
+    <Layout>
       <Header />
-      <Text>Home</Text>
-      <Button title='Выйти' onPress={() => logout()} />
-    </View>
+      <Text>{user?.email}</Text>
+    </Layout>
   )
 };
 

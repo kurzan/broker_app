@@ -12,7 +12,7 @@ const Header = () => {
   const { navigate } = useNavigation();
 
   return (
-    <Padding style={tw('flex-row items-center mt-16')}>
+    <Padding style={tw('flex-row items-center')}>
       <Avatar name='Misha' />
       <TouchableOpacity onPress={() => navigate('Profile')} style={tw('flex-row items-end')}>
         <Text style={tw('text-2xl text-gray-800 font-bold')}>Misha</Text>
