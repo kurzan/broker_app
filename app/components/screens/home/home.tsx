@@ -6,6 +6,8 @@ import { useAuth } from "../../../hooks/useAuth";
 import { useEffect } from "react";
 import Padding from "../../ui/Padding";
 import Stories from "./stories/Stories";
+import SubHeading from "../../ui/sub-heading";
+import PublicOffering from "../markets/public-offering/public-offering";
 
 
 const Home = () => {
@@ -14,8 +16,9 @@ const Home = () => {
   return (
     <Layout>
       <Header />
+      <Stories />
+      <PublicOffering />
       <Padding>
-        <Stories />
         <Button onPress={() => {}} title='Открыть новый договор' />
       </Padding>
     </Layout>

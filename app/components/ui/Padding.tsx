@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import tw from 'tailwind-rn';
 
 interface IPadding {
-  children: any,
+  children?: any,
   style?: any
 }
 

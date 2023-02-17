@@ -4,7 +4,7 @@ import { useAuth } from "../hooks/useAuth";
 import { useState, useEffect } from 'react';
 import Auth from "../components/screens/auth/auth";
 import Home from "../components/screens/home/home";
-import Market from '../components/screens/payments/Market';
+import Market from '../components/screens/markets/Market';
 import Quotes from '../components/screens/quotes/Quotes';
 import Profile from "../components/screens/profile/profile";
 import Footer from "../components/layouts/footer/Footer";
