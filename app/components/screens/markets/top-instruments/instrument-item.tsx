@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { FC } from 'react';
 import {SafeAreaView, View, Pressable, TouchableHighlight, Image, Text, StyleSheet } from 'react-native';
 import tw from 'tailwind-rn';
@@ -18,10 +19,12 @@ interface IInstrument {
 
 const InstrumentItem: FC<IInstrument> = ({instrument}) => {
 
+  const navigation = useNavigation();
+
   const changeStyle = instrument.LASTTOPREVPRICE >= 0 ? { color: 'green' } : { color: 'red' };
 
   return(
-  <TouchableHighlight underlayColor={'white'}>
+  <TouchableHighlight underlayColor={'white'} onPress={() => navigation.navigate(instrument.ISIN)}>
     <View style={stylesItem.container} >
       <InstrumetLogo isin={instrument.ISIN}/>
       <View>

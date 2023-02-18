@@ -4,11 +4,15 @@ import { IOfferItem } from "./public-offering";
 import tw from 'tailwind-rn';
 import InstrumetLogo from "../../../ui/InstumentLogo";
 import { BOX_SHADOW } from "../../../../utils/styles";
+import { useNavigation } from "@react-navigation/native";
 
 
 const OfferItem: FC<{ instrument: IOfferItem }> = ({ instrument }) => {
+
+  const navigation = useNavigation();
+
   return (
-    <Pressable>
+    <Pressable onPress={() => navigation.navigate('Market')}>
 
       <ImageBackground source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/broker-2226d.appspot.com/o/offers%2Fpion-liz%2Fpionliz.png?alt=media&token=d3943352-4c65-4a12-b038-d8154e0e82a1' }}
         resizeMode='cover' imageStyle={tw('rounded-xl')} style={{

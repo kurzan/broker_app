@@ -19,33 +19,33 @@ const offers: IOfferItem[] = [
     series: 'БР-5'
   },
   {
-    _id: 0,
+    _id: 1,
     emitent: 'Пионер-Лизинг',
-    isin: 'RU000A104V00',
+    isin: 'RU0009029540',
     series: 'БР-5'
   },
   {
-    _id: 0,
+    _id: 2,
     emitent: 'Пионер-Лизинг',
-    isin: 'RU000A104V00',
+    isin: 'US5603172082',
     series: 'БР-5'
   },
   {
-    _id: 0,
+    _id: 3,
     emitent: 'Пионер-Лизинг',
-    isin: 'RU000A104V00',
+    isin: 'RU000A0ZZG02',
     series: 'БР-5'
   }
 ]
 
-
+//@ts-ignore
 const PublicOffering = () => {
   return (
 
     <View style={tw('my-8')}>
       <SubHeading text="Учавствуйте в размещениях" />
       <ScrollView showsHorizontalScrollIndicator={false} horizontal style={tw('mt-5')}>
-        {offers.map(item => <OfferItem key={item.isin} instrument={item}/>)}
+        {offers.map(item => <OfferItem key={item._id} instrument={item}/>)}
       </ScrollView>
     </View>
   )

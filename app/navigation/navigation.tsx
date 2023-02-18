@@ -9,12 +9,16 @@ import Quotes from '../components/screens/quotes/Quotes';
 import Profile from "../components/screens/profile/profile";
 import Footer from "../components/layouts/footer/Footer";
 
+import TopInstruments from '../components/screens/markets/top-instruments/TopInstruments';
+import PublicOffering from '../components/screens/markets/public-offering/public-offering';
+import InstrumentView from '../components/screens/instrument-view/instrument-view';
+
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
   const { user } = useAuth();
   const ref = useNavigationContainerRef();
-  const [name, setName]  = useState<string | undefined>(undefined);
+  const [name, setName] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     const timeout = setTimeout(() => setName(ref.getCurrentRoute()?.name), 100);
@@ -35,16 +39,19 @@ const Navigation = () => {
   return (
     <>
       <NavigationContainer ref={ref}>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
           {user ? (
             <>
-              <Stack.Screen name='Home' component={Home} />
-              <Stack.Screen name='Market' component={Market} />
-              <Stack.Screen name='Quotes' component={Quotes} />
-              <Stack.Screen name='Profile' component={Profile} />
-            </> 
+              <Stack.Group>
+                <Stack.Screen name='Home' component={Home} />
+                <Stack.Screen name='Market' component={Market} />
+                <Stack.Screen name='Quotes' component={Quotes} />
+                <Stack.Screen name='Profile' component={Profile} />
+                <Stack.Screen name='InstrumentView' component={InstrumentView} initialParams={{ itemId: 'RU0009089825' }}/>
+              </Stack.Group>
+            </>
           ) : (<Stack.Screen name='Auth' component={Auth} />)}
-        </Stack.Navigator> 
+        </Stack.Navigator>
       </NavigationContainer>
       {user && <Footer navigate={ref.navigate} currentRoute={name} />}
     </>

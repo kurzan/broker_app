@@ -9,8 +9,8 @@ import Stories from "./stories/Stories";
 import SubHeading from "../../ui/sub-heading";
 import PublicOffering from "../markets/public-offering/public-offering";
 
-
-const Home = () => {
+//@ts-ignore
+const Home = ({navigation}) => {
   const {user} = useAuth();
 
   return (
@@ -19,7 +19,7 @@ const Home = () => {
       <Stories />
       <PublicOffering />
       <Padding>
-        <Button onPress={() => {}} title='Открыть новый договор' />
+        <Button onPress={() => navigation.navigate('Market')} title='Открыть новый договор' />
       </Padding>
     </Layout>
   )
