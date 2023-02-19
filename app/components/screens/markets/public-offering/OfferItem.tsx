@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { View, Text, Pressable, ImageBackground } from "react-native";
-import { IOfferItem } from "./public-offering";
+import { IOfferItem } from "./PublicOffering";
 import tw from 'tailwind-rn';
 import InstrumetLogo from "../../../ui/InstumentLogo";
 import { BOX_SHADOW } from "../../../../utils/styles";

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Text, Pressable } from "react-native";
 import tw from 'tailwind-rn';
 import { IFooterItem } from "./types";

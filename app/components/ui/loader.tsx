@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator } from "react-native";
+import { ActivityIndicator } from "react-native";
 
 const Loader = () => {
   return (

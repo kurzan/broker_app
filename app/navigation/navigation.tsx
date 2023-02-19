@@ -2,16 +2,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import { useAuth } from "../hooks/useAuth";
 import { useState, useEffect } from 'react';
-import Auth from "../components/screens/auth/auth";
-import Home from "../components/screens/home/home";
+import Auth from "../components/screens/auth/Auth";
+import Home from "../components/screens/home/Home";
 import Market from '../components/screens/markets/Market';
 import Quotes from '../components/screens/quotes/Quotes';
-import Profile from "../components/screens/profile/profile";
+import Profile from "../components/screens/profile/Profile";
 import Footer from "../components/layouts/footer/Footer";
-
-import TopInstruments from '../components/screens/markets/top-instruments/TopInstruments';
-import PublicOffering from '../components/screens/markets/public-offering/public-offering';
-import InstrumentView from '../components/screens/instrument-view/instrument-view';
+import InstrumentView from '../components/screens/instrument-view/InstrumentView';
 
 const Stack = createNativeStackNavigator();
 

@@ -3,7 +3,7 @@ import { View, ScrollView, Text } from "react-native";
 import tw from 'tailwind-rn';
 import { useStories } from "./useStories";
 
-import Loader from "../../../ui/loader";
+import Loader from "../../../ui/Loader";
 import StoryItem from "./StoryItem";
 
 

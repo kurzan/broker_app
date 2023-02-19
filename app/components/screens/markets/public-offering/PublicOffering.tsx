@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { View, ScrollView } from "react-native";
 import tw from 'tailwind-rn';
-import SubHeading from "../../../ui/sub-heading";
-import OfferItem from "./offer-item";
+import SubHeading from "../../../ui/SubHeading";
+import OfferItem from "./OfferItem";
 
 export interface IOfferItem {
   _id: number,

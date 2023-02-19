@@ -1,8 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { FC } from 'react';
-import {SafeAreaView, View, Pressable, TouchableHighlight, Image, Text, StyleSheet } from 'react-native';
+import { View, TouchableHighlight, Text, StyleSheet } from 'react-native';
 import tw from 'tailwind-rn';
-import Avatar from '../../../ui/avatar';
 import InstrumetLogo from '../../../ui/InstumentLogo';
 
 

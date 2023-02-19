@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { TouchableHighlight, Text, View, Pressable, StyleSheet } from "react-native";
 import tw from 'tailwind-rn';
-import InstrumentItem from "./instrument-item";
+import InstrumentItem from "./InstrumentItem";
 import ViewBox from "../../../ui/ViewBox";
 import Padding from "../../../ui/Padding";
 

@@ -1,11 +1,11 @@
 import tw from 'tailwind-rn';
 import Padding from "../../ui/Padding";
-import Avatar from '../../ui/avatar';
+import Avatar from '../../ui/Avatar';
 import { TouchableOpacity, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Entypo} from '@expo/vector-icons';
 import { useProfile } from '../profile/useProfile';
-import Loader from '../../ui/loader';
+import Loader from '../../ui/Loader';
 import { useAuth } from '../../../hooks/useAuth';
 
 

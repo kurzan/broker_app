@@ -2,9 +2,9 @@ import { View, Text, ScrollView } from "react-native";
 import { useEffect, useState } from "react";
 import { getRequest, SHARES_MOEX_API } from "../../../utils/api";
 import Layout from "../../layouts/Layout";
-import Loader from "../../ui/loader";
-import InstrumentItem from "../markets/top-instruments/instrument-item";
-import Heading from "../../ui/heading";
+import Loader from "../../ui/Loader";
+import InstrumentItem from "../markets/top-instruments/InstrumentItem";
+import Heading from "../../ui/Heading";
 
 const Quotes = () => {
 

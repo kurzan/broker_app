@@ -1,11 +1,11 @@
 import { View, Text } from "react-native";
 import { useProfile } from "./useProfile";
 import Layout from "../../layouts/Layout";
-import Heading from "../../ui/heading";
+import Heading from "../../ui/Heading";
 import Padding from "../../ui/Padding";
-import Field from "../../ui/field";
-import Loader from "../../ui/loader";
-import Button from "../../ui/button";
+import Field from "../../ui/Field";
+import Loader from "../../ui/Loader";
+import Button from "../../ui/Button";
 import { useAuth } from "../../../hooks/useAuth";
 
 

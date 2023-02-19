@@ -1,6 +1,6 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { View, ScrollView, Text } from "react-native";
-import Button from "../../ui/button";
+import Button from "../../ui/Button";
 
 
 

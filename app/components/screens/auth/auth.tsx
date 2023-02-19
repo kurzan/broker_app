@@ -4,9 +4,9 @@ import tw from 'tailwind-rn';
 import { useState } from "react";
 import { useAuth } from "../../../hooks/useAuth";
 
-import Loader from "../../ui/loader";
-import Field from "../../ui/field";
-import Button from "../../ui/button";
+import Loader from "../../ui/Loader";
+import Field from "../../ui/Field";
+import Button from "../../ui/Button";
 
 interface IData {
   email: string,

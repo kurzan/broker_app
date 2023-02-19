@@ -1,12 +1,12 @@
 import { View, ScrollView, Text } from "react-native";
 import Layout from "../../layouts/Layout";
-import Heading from "../../ui/heading";
-import FilterButton from "../../ui/filter-button";
+import Heading from "../../ui/Heading";
+import FilterButton from "../../ui/FilterButton";
 import tw from 'tailwind-rn';
 import { useEffect, useState } from "react";
 import { getRequest, SHARES_MOEX_API } from "../../../utils/api";
 import TopInstruments from "./top-instruments/TopInstruments";
-import Loader from "../../ui/loader";
+import Loader from "../../ui/Loader";
 import ViewBox from "../../ui/ViewBox";
 import InstrumetLogo from "../../ui/InstumentLogo";
 import Padding from "../../ui/Padding";
@@ -22,10 +22,6 @@ const Market = () => {
   useEffect(() => {
     getRequest(SHARES_MOEX_API, setMarketDataShares)
   }, [])
-
-  useEffect(() => {
-    console.log(marketDataShares)
-  }, [marketDataShares])
 
   return (
     <Layout>
