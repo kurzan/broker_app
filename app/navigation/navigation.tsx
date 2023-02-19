@@ -47,7 +47,7 @@ const Navigation = () => {
                 <Stack.Screen name='Market' component={Market} />
                 <Stack.Screen name='Quotes' component={Quotes} />
                 <Stack.Screen name='Profile' component={Profile} />
-                <Stack.Screen name='InstrumentView' component={InstrumentView} initialParams={{ itemId: 'RU0009089825' }}/>
+                <Stack.Screen name='InstrumentView' component={InstrumentView}/>
               </Stack.Group>
             </>
           ) : (<Stack.Screen name='Auth' component={Auth} />)}

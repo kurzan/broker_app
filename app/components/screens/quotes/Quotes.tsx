@@ -18,7 +18,7 @@ const Quotes = () => {
   return (
     <Layout isScrollView={false}>
       <Heading text='Котировки'/>
-      <ScrollView >
+      <ScrollView showsVerticalScrollIndicator={false}>
         {marketDataShares ? marketDataShares.slice(0, 15).map((item: any) => <InstrumentItem key={item.ISIN} instrument={item} />) : <Loader/>}
       </ScrollView>
     </Layout>

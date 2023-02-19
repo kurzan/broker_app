@@ -24,7 +24,9 @@ const InstrumentItem: FC<IInstrument> = ({instrument}) => {
   const changeStyle = instrument.LASTTOPREVPRICE >= 0 ? { color: 'green' } : { color: 'red' };
 
   return(
-  <TouchableHighlight underlayColor={'white'} onPress={() => navigation.navigate(instrument.ISIN)}>
+  <TouchableHighlight underlayColor={'rgba(255,255,255, 0.1)'} onPress={() => navigation.push('InstrumentView', {
+    itemId: instrument.ISIN,
+  })}>
     <View style={stylesItem.container} >
       <InstrumetLogo isin={instrument.ISIN}/>
       <View>
