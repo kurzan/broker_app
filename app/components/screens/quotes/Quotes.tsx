@@ -5,15 +5,11 @@ import Layout from "../../layouts/Layout";
 import Loader from "../../ui/Loader";
 import InstrumentItem from "../markets/top-instruments/InstrumentItem";
 import Heading from "../../ui/Heading";
+import { useData } from "../../../hooks/useData";
 
 const Quotes = () => {
 
-  const [marketDataShares, setMarketDataShares] = useState([]);
-
-  useEffect(() => {
-    getRequest(SHARES_MOEX_API, setMarketDataShares)
-  }, [])
-
+  const { marketDataShares, setMarketDataShares } = useData();
 
   return (
     <Layout isScrollView={false}>

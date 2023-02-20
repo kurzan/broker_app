@@ -8,9 +8,13 @@ import Padding from "../../ui/Padding";
 import Stories from "./stories/Stories";
 import SubHeading from "../../ui/SubHeading";
 import PublicOffering from "../markets/public-offering/PublicOffering";
+import { useNavigation } from "@react-navigation/native";
 
-//@ts-ignore
-const Home = ({navigation}) => {
+
+const Home = () => {
+
+ const { navigation } = useNavigation();
+
   const {user} = useAuth();
 
   return (

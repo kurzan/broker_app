@@ -11,16 +11,27 @@ import ViewBox from "../../ui/ViewBox";
 import InstrumetLogo from "../../ui/InstumentLogo";
 import Padding from "../../ui/Padding";
 import { useNavigation } from "@react-navigation/native";
+import { preparedInstruments } from "../../../utils/utils";
+import { useData } from "../../../hooks/useData";
 
 const Market = () => {
 
-  const [marketDataShares, setMarketDataShares] = useState([]);
-  const [loading, setIsLoading] = useState();
-
   const navigation = useNavigation();
 
+  const { marketDataShares, setMarketDataShares } = useData();
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+
   useEffect(() => {
-    getRequest(SHARES_MOEX_API, setMarketDataShares)
+    getRequest(SHARES_MOEX_API)
+      .then((data) => {
+        setMarketDataShares(preparedInstruments(data))
+        setIsLoading(false)
+      })
+      .catch(() => setIsError(true))
+      .finally(() => setIsLoading(false))
   }, [])
 
   return (
@@ -36,7 +47,7 @@ const Market = () => {
         </ScrollView>
       </View>
 
-      {!marketDataShares ? <Loader /> :
+      {isLoading ? <Loader /> :
         (
           <>
             <ViewBox>

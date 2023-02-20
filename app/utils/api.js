@@ -11,8 +11,7 @@ export const checkResponde = (response) => {
   return Promise.reject(response.status)
 }
 
-export const getRequest = (url, setData) => {
-  fetch(url)
+export const getRequest = (url) => {
+  return fetch(url)
     .then(r => checkResponde(r))
-    .then(data => setData(preparedInstruments(data)))
 }

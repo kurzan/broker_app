@@ -33,8 +33,8 @@ const TopInstruments: FC<ITopInstruments> = ({instruments, title, subtitle}) => 
         <Text style={styles.main_text}>{title}</Text>
         <Text style={styles.text}>{subtitle}</Text>
         <View style={styles.fixToText}>
-          <Pressable disabled={top ? true : false} onPress={() => onTopClick()}><Text style={tw('text-gray-50')}>Взлеты дня</Text></Pressable>
-          <Pressable style={tw('text-gray-50')} disabled={top ? false : true} onPress={() => onOutClick()}><Text style={tw('text-gray-50')}>Взлеты дня</Text></Pressable>
+          <Pressable disabled={top ? true : false} onPress={() => onTopClick()}><Text style={top ? tw('text-blue-400') : tw('text-gray-50')}>Взлеты дня</Text></Pressable>
+          <Pressable style={tw('text-gray-50')} disabled={top ? false : true} onPress={() => onOutClick()}><Text style={top ? tw('text-gray-50') : tw('text-blue-400')}>Падения дня</Text></Pressable>
         </View>
       </Padding>
       { top && inTop.slice(0, 5).map((item: any) => <InstrumentItem key={item.SECID} instrument={item} />)}

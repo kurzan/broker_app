@@ -19,3 +19,14 @@ export const preparedInstruments = (data) => {
 
   return instruments;
 };
+
+export const isImageIsin = (url) => {
+  return fetch(url)
+    .then(res => {
+      if(res.ok) {
+        return res.status
+      }
+
+      return Promise.reject(response.status)
+    })
+};
