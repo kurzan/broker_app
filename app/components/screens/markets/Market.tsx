@@ -54,7 +54,7 @@ const Market = () => {
               <Padding style={{ paddingTop: 12 }}>
                 <Text style={tw('text-gray-300')}>Случайные акции</Text>
               </Padding>
-              <ScrollView showsHorizontalScrollIndicator={false} horizontal style={tw('my-4')}>
+              <ScrollView showsHorizontalScrollIndicator={false} horizontal style={tw('my-4 ml-4')}>
                 {marketDataShares && marketDataShares.slice(0, 8).sort((prev: any, next: any) => next.LASTTOPREVPRICE - prev.LASTTOPREVPRICE).map((item: any) => <InstrumetLogo isPressable={true} key={item.ISIN} isin={item.ISIN} />)}
               </ScrollView>
             </ViewBox>
