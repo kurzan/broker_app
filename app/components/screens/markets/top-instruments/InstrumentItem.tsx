@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { View, TouchableHighlight, Text, StyleSheet } from 'react-native';
 import tw from 'tailwind-rn';
 import InstrumetLogo from '../../../ui/InstumentLogo';

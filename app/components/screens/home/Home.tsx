@@ -11,9 +11,7 @@ import PublicOffering from "../markets/public-offering/PublicOffering";
 import { useNavigation } from "@react-navigation/native";
 
 
-const Home = () => {
-
- const { navigation } = useNavigation();
+const Home = ({ navigation } ) => {
 
   const {user} = useAuth();
 

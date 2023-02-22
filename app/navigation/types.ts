@@ -3,7 +3,7 @@ export type TypeRootStackParamList = {
   Home: undefined;
   Profile: undefined;
   Quotes: undefined;
-  Support: undefined;
+  Chats: undefined;
   Market: undefined;
   More: undefined;
 };

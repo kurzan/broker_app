@@ -14,13 +14,13 @@ const OfferItem: FC<{ instrument: IOfferItem }> = ({ instrument }) => {
   return (
     <Pressable onPress={() => navigation.navigate('Market')}>
 
-      <ImageBackground source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/broker-2226d.appspot.com/o/offers%2Fpion-liz%2Fpionliz.png?alt=media&token=d3943352-4c65-4a12-b038-d8154e0e82a1' }}
+      <ImageBackground source={{ uri: instrument.image } }
         resizeMode='cover' imageStyle={tw('rounded-xl')} style={{
-          ...tw('ml-4 rounded-xl p-2 w-52 h-52 flex-col'),
+          ...tw('ml-4 rounded-xl p-2 w-52 h-52 flex-col justify-between'),
           ...BOX_SHADOW
         }}>
         <InstrumetLogo isin={instrument.isin} />
-        <Text style={{ color: 'white', fontSize: 18, marginTop: 60 }}>{instrument.emitent} {instrument.series}</Text>
+        <Text style={{ color: 'white', fontSize: 18, marginBottom: 8 }}>{instrument.emitent} {instrument.series}</Text>
       </ImageBackground>
 
     </Pressable>

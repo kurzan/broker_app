@@ -8,6 +8,8 @@ import Market from '../components/screens/markets/Market';
 import Quotes from '../components/screens/quotes/Quotes';
 import Profile from "../components/screens/profile/Profile";
 import Footer from "../components/layouts/footer/Footer";
+import Chats from '../components/screens/support/Chats';
+import ChatView from '../components/screens/support/ChatView';
 import InstrumentView from '../components/screens/instrument-view/InstrumentView';
 
 const Stack = createNativeStackNavigator();
@@ -44,7 +46,10 @@ const Navigation = () => {
                 <Stack.Screen name='Market' component={Market} />
                 <Stack.Screen name='Quotes' component={Quotes} />
                 <Stack.Screen name='Profile' component={Profile} />
+                <Stack.Screen name='More' component={Profile} />
+                <Stack.Screen name='Chats' component={Chats} />
                 <Stack.Screen name='InstrumentView' component={InstrumentView}/>
+                <Stack.Screen name='ChatView' component={ChatView}/>
               </Stack.Group>
             </>
           ) : (<Stack.Screen name='Auth' component={Auth} />)}

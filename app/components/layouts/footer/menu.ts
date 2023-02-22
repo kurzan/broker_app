@@ -18,8 +18,8 @@ export const menu: IFooterItem[] = [
   },
   {
     iconName: 'message1',
-    title: 'Support',
-    ru_title: 'Чат'
+    title: 'Chats',
+    ru_title: 'Чаты'
   },
   {
     iconName: 'ellipsis1',
