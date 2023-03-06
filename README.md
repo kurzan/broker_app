@@ -1,7 +1,6 @@
 ## Демо 
 
-![IMG_4494](https://user-images.githubusercontent.com/112556583/221573501-0297e1f4-a927-4b77-bf55-933f101885db.gif)
-
+![IMG_4527](https://user-images.githubusercontent.com/112556583/223138761-0305513d-e1f3-41ed-b548-a9a7dd3efe55.gif)
 
 ## Available Scripts
 
